@@ -89,10 +89,11 @@
 
   /* ---------- MARQUEE ---------- */
   .marquee{background:var(--ink);color:var(--paper);padding:16px 0;overflow:hidden;white-space:nowrap;margin-top:44px}
-  .marquee-track{display:inline-flex;gap:40px;animation:scroll 26s linear infinite}
+  .marquee-track{display:flex;width:max-content;animation:scroll 40s linear infinite}
+  .marquee-group{display:flex;align-items:center;gap:40px;padding-right:40px;flex-shrink:0}
   .marquee span{font-family:"Bricolage Grotesque";font-weight:700;font-size:1.15rem;display:inline-flex;align-items:center;gap:40px;opacity:.92}
   .marquee span::after{content:"◆";color:var(--amber);font-size:.7rem}
-  @keyframes scroll{to{transform:translateX(-50%)}}
+  @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
   /* ---------- SECTION SHELL ---------- */
   section{padding:90px 0}
@@ -288,8 +289,14 @@
 <!-- MARQUEE -->
 <div class="marquee" aria-hidden="true">
   <div class="marquee-track">
-    <span>Falazás</span><span>Vakolás</span><span>Betonozás</span><span>Aljzatkészítés</span><span>Térkövezés</span><span>Homlokzat</span><span>Lakásépítés</span><span>Felújítás</span>
-    <span>Falazás</span><span>Vakolás</span><span>Betonozás</span><span>Aljzatkészítés</span><span>Térkövezés</span><span>Homlokzat</span><span>Lakásépítés</span><span>Felújítás</span>
+    <div class="marquee-group">
+      <span>Falazás</span><span>Vakolás</span><span>Betonozás</span><span>Aljzatkészítés</span><span>Térkövezés</span><span>Homlokzat</span><span>Lakásépítés</span><span>Felújítás</span>
+      <span>Falazás</span><span>Vakolás</span><span>Betonozás</span><span>Aljzatkészítés</span><span>Térkövezés</span><span>Homlokzat</span><span>Lakásépítés</span><span>Felújítás</span>
+    </div>
+    <div class="marquee-group">
+      <span>Falazás</span><span>Vakolás</span><span>Betonozás</span><span>Aljzatkészítés</span><span>Térkövezés</span><span>Homlokzat</span><span>Lakásépítés</span><span>Felújítás</span>
+      <span>Falazás</span><span>Vakolás</span><span>Betonozás</span><span>Aljzatkészítés</span><span>Térkövezés</span><span>Homlokzat</span><span>Lakásépítés</span><span>Felújítás</span>
+    </div>
   </div>
 </div>
 
